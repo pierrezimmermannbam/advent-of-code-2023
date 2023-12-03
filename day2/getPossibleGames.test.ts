@@ -1,22 +1,32 @@
-import { getGamesPower, getPossibleGames } from "./getPossibleGame"
+import { getGamesPower, getPossibleGames } from "./getPossibleGame";
 
-it('returns sum of ids of possible games', () => {
-    expect(getPossibleGames(`Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+it("returns sum of ids of possible games", () => {
+  expect(
+    getPossibleGames(
+      `Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
     Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
     Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
     Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-    Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`, 14, 12, 13 )).toBe(8)
-})
+    Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`,
+      14,
+      12,
+      13,
+    ),
+  ).toBe(8);
+});
 
-it('returns the sum of games power', () => {
-    expect(getGamesPower(`Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+it("returns the sum of games power", () => {
+  expect(
+    getGamesPower(`Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
     Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
     Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
     Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-    Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`)).toBe(2286)
-})
+    Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`),
+  ).toBe(2286);
+});
 
-console.log(getGamesPower(`Game 1: 1 red, 10 blue, 5 green; 11 blue, 6 green; 6 green; 1 green, 1 red, 12 blue; 3 blue; 3 blue, 4 green, 1 red
+console.log(
+  getGamesPower(`Game 1: 1 red, 10 blue, 5 green; 11 blue, 6 green; 6 green; 1 green, 1 red, 12 blue; 3 blue; 3 blue, 4 green, 1 red
 Game 2: 3 red, 5 green; 5 green, 7 red; 1 blue, 7 red, 3 green; 3 red, 2 blue; 5 green, 4 red
 Game 3: 4 blue, 4 green; 2 green, 2 blue; 8 green, 2 red, 3 blue
 Game 4: 3 blue, 15 green; 16 green; 2 red, 7 green; 2 blue, 14 green
@@ -115,4 +125,5 @@ Game 96: 4 blue, 2 red; 3 green, 10 blue, 7 red; 2 blue, 7 green, 1 red; 13 blue
 Game 97: 6 red, 4 green; 1 blue, 13 red; 3 green, 13 red
 Game 98: 1 red, 13 blue, 1 green; 7 green, 5 blue, 3 red; 15 blue, 6 green; 4 blue, 5 green; 13 blue, 2 green, 1 red; 4 blue, 3 red, 2 green
 Game 99: 1 red, 2 green; 2 red, 2 blue, 1 green; 3 green, 1 blue, 6 red; 3 red, 4 green; 5 red, 1 blue, 4 green; 1 blue, 2 red, 1 green
-Game 100: 9 green, 2 blue, 12 red; 2 blue, 14 red, 2 green; 14 red, 12 green`))
+Game 100: 9 green, 2 blue, 12 red; 2 blue, 14 red, 2 green; 14 red, 12 green`),
+);

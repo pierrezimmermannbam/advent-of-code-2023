@@ -1,21 +1,25 @@
 import { getTrebuchetCalibration } from "./getTrebuchetCalibration";
 
-it('returns correct calibration', () => {
-    expect(getTrebuchetCalibration(`1abc2
+it("returns correct calibration", () => {
+  expect(
+    getTrebuchetCalibration(`1abc2
     pqr3stu8vwx
     a1b2c3d4e5f
-    treb7uchet`)).toBe(142)
-})
+    treb7uchet`),
+  ).toBe(142);
+});
 
-it.only('returns correct for input 2', () => {
-    expect(getTrebuchetCalibration(`two1nine
+it.only("returns correct for input 2", () => {
+  expect(
+    getTrebuchetCalibration(`two1nine
     eightwothree
     abcone2threexyz
     xtwone3four
     4nineeightseven2
     zoneight234
-    7pqrstsixteen`)).toEqual(281)
-})
+    7pqrstsixteen`),
+  ).toEqual(281);
+});
 
 // console.log(getTrebuchetCalibration(`tmmnhlxzpj1eightldxhjnone97
 // 9fivekfpl855mjmfdqzvbn
