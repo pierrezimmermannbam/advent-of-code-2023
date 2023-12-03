@@ -10,7 +10,6 @@ export const getTrebuchetCalibration = (input: string): number => {
 }
 
 const getScoreForLine = (line: string): number => {
-    const digits = line.replace(/[\D]|one|two|three|four|five|six|seven|eight\nine/g, '');
     const matches = [];
     for (let i = 0; i < line.length; i++) {
         const match = line.slice(i).match(/\d|one|two|three|four|five|six|seven|eight|nine/);
