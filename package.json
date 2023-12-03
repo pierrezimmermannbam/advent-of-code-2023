@@ -1,0 +1,29 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "advent of code",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrezimmermannbam/advent-of-code-2023.git"
+  },
+  "keywords": [
+    "advent"
+  ],
+  "author": "pierre zimmermann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierrezimmermannbam/advent-of-code-2023/issues"
+  },
+  "homepage": "https://github.com/pierrezimmermannbam/advent-of-code-2023#readme",
+  "devDependencies": {
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.10",
+    "jest": "^29.7.0"
+  }
+}
