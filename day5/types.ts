@@ -14,3 +14,17 @@ export type Range = {
   sourceRangeStart: number;
   rangeLength: number;
 };
+
+export type SecondMap = {
+  seedsNeeded: Array<{
+    destinationRangeStart: number;
+    rangeLength: number;
+  }>;
+  seedToSoilMap: Array<Range>;
+  soilToFertilizerMap: Array<Range>;
+  fertilizerToWaterMap: Array<Range>;
+  waterToLightMap: Array<Range>;
+  lightToTemperatureMap: Array<Range>;
+  temperatureToHumidityMap: Array<Range>;
+  humidityToLocationMap: Array<Range>;
+};

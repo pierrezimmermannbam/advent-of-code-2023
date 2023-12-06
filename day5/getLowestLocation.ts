@@ -1,4 +1,4 @@
-import { parseMap } from "./parser";
+import { parseMap, secondParser } from "./parser";
 import { Map, Range } from "./types";
 
 export const getLowestLocation = (input: string): number => {
@@ -11,7 +11,24 @@ export const getLowestLocation = (input: string): number => {
   return Math.min(...locationSeeds);
 };
 
-const getLocationSeed = (seed: number, map: Map) => {
+export const getSecondLowestLocation = (input: string): number => {
+  let lowestLocation = Infinity;
+  const secondMap = secondParser(input);
+  secondMap.seedsNeeded.forEach((seedRange) => {
+    console.log("new seed range", seedRange);
+    for (let i = 0; i < seedRange.rangeLength; i++) {
+      const seed = seedRange.destinationRangeStart + i;
+      const location = getLocationSeed(seed, secondMap);
+      if (location < lowestLocation) {
+        lowestLocation = location;
+      }
+    }
+  });
+
+  return lowestLocation;
+};
+
+const getLocationSeed = (seed: number, map: Omit<Map, "seedsNeeded">) => {
   const soil = getMappingFromRangeArrayAndSource(seed, map.seedToSoilMap);
   const fertilizer = getMappingFromRangeArrayAndSource(
     soil,
